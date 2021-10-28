@@ -1,7 +1,5 @@
-FROM alpine
-
-ENV TIMEZONE            Asia/Shanghai
-# 阿里源
+FROM alpine:latest
+ENV TIMEZONE Asia/Shanghai
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 RUN apk update \
     && apk upgrade \
